@@ -18,10 +18,10 @@ $global-font-size: 62.5%; // root font size calculation trick to make 1rem  = 10
 $color-01: #fff;
 $color-02: #f3f3f3;
 $color-03: #16181f;
-//$color-04: #;
-//$color-05: #;
-//$color-06: #;
-//$color-07: #;
+$color-04: #1b91ff;
+$color-05: #673ab7;
+$color-06: #f16d85;
+$color-07: #66fcf1;
 //$color-08: #;
 //$color-09: #;
 //$color-10: #;
@@ -66,7 +66,8 @@ $fontsize-s: 1.4rem;
 $fontsize-xs: 1.2rem;
 
 // timing variables
-$text-animation: 250ms cubic-bezier(.075, .82, .165, 1);
+$button-animation: 220ms ease-out;
+$text-animation: 220ms cubic-bezier(.075, .82, .165, 1);
 
 // z-index
 
