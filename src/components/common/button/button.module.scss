@@ -9,7 +9,7 @@
   --button-padding-x-axis: 2rem;
   --button-padding-y-axis: 0.8rem;
   --button-font-size: 1.4rem;
-  --button-background-color: #1b91ff;
+  --button-background-color: #{$color-04};
   --button-background-color-active: #0c4a84;
   --button-text-color: #{$color-01};
   // **** //
@@ -18,7 +18,7 @@
   padding: var(--button-padding-y-axis) var(--button-padding-x-axis);
   border-radius: 3em;
   background-color: var(--button-background-color);
-  transition: background-color 220ms ease;
+  transition: background-color $button-animation;
 
   &:hover,
   &:focus {
