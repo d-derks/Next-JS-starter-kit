@@ -3,6 +3,8 @@ import styles from './basePageLayout.module.scss';
 import Link from 'next/link';
 import React from 'react';
 import Typography from "#components/common/typography/Typography";
+import PageHeader from "#components/pageHeader/PageHeader";
+import PageFooter from "#components/pageFooter/PageFooter";
 
 export const siteTitle = 'Next js starter kit';
 
@@ -14,7 +16,7 @@ type BasePageLayoutProps = {
 
 const BasePageLayout = ({children, home, metaTitle = 'meta title'}: BasePageLayoutProps) => {
     return (
-        <div className={styles.container}>
+       <>
             <Head>
                 <meta name="description" content="Learn how to build a personal website using Next.js"/>
                 <meta
@@ -31,9 +33,13 @@ const BasePageLayout = ({children, home, metaTitle = 'meta title'}: BasePageLayo
                 <link rel="preconnect" href="https://fonts.gstatic.com"/>
                 <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet"/>
             </Head>
-            <header>
-                <Typography text='This is the header area' variant='h2'/>
-            </header>
+            <PageHeader>
+                <Typography
+                    text='This is the header area'
+                    variant='h2'
+                    color='light'
+                />
+            </PageHeader>
             <main className={styles.main}>
                 {children}
                 {!home && (
@@ -42,10 +48,14 @@ const BasePageLayout = ({children, home, metaTitle = 'meta title'}: BasePageLayo
                     </Link>
                 )}
             </main>
-            <footer>
-                <Typography text='This is the footer area' variant='h2'/>
-            </footer>
-        </div>
+            <PageFooter>
+                <Typography
+                    text='This is the footer area'
+                    variant='h2'
+                    color='light'
+                />
+            </PageFooter>
+        </>
     )
 }
 
