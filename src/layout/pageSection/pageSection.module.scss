@@ -1,0 +1,39 @@
+/* page section *
+
+-------------------------------------- */
+
+@import '../../styles/resources/mixins/index';
+@import '../../styles/resources/variables';
+
+.host {
+  --page-section-background-color: #{$color-01};
+
+  position: relative;
+  width: min(100%, 200rem);
+  margin: auto;
+  background-color: var(--page-section-background-color);
+
+  &:not(.isFullWidth) {
+    padding: 0 var(--padding-page-sides, 1.6rem);
+  }
+}
+
+.inner {
+  width: 100%;
+  max-width: $max-width-page-l;
+  margin: auto;
+}
+
+.isMaxWidthXl {
+  .inner {
+    max-width: $max-width-page-xl;
+  }
+}
+
+.isBgDark {
+  --page-section-background-color: #{$color-03}; // todo: replace color
+}
+
+.isFullWidth {
+  width: 100%;
+}
