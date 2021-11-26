@@ -1,0 +1,38 @@
+/* button close *
+
+-------------------------------------- */
+
+@import '../../../styles/resources/mixins/index';
+@import '../../../styles/resources/variables';
+
+.host {
+  --button-close-size: 2rem;
+  --button-close-icon-color: #{$color-03};
+
+  width: var(--button-close-size);
+  height: var(--button-close-size);
+
+  &:hover,
+  &:focus {
+    .icon {
+      --button-close-icon-color: #{$color-04};
+      transition: all $button-animation;
+    }
+  }
+}
+
+.icon {
+  color: var(--button-close-icon-color);
+}
+
+.small {
+  --button-close-size: 1rem;
+}
+
+.large {
+  --button-close-size: 3rem;
+}
+
+.light {
+  --button-close-icon-color: #{$color-01};
+}
