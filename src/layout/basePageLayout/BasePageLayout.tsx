@@ -38,7 +38,7 @@ const BasePageLayout = ({children, home, metaTitle = 'meta title'}: BasePageLayo
                 {children}
                 {!home && (
                     <Link href="/">
-                        <Typography text='Back to home' variant='a'/>
+                        Back to home
                     </Link>
                 )}
             </main>
