@@ -1,0 +1,13 @@
+/* mobile menu *
+
+-------------------------------------- */
+
+.host {
+  display: none;
+  visibility: hidden;
+
+  &[aria-expanded="true"] {
+    display: block;
+    visibility: visible;
+  }
+}
