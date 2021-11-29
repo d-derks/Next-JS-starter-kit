@@ -2,27 +2,20 @@ import BasePageLayout from '../../layout/basePageLayout/BasePageLayout';
 import Date from '#components/example/date/Date'
 import { getAllPostIds, getPostData } from '../../lib/examplePosts'
 import Typography from "#components/common/typography/Typography";
+import { GetStaticProps, GetStaticPaths } from 'next'
 
 // dynamic example page
 
-export async function getStaticProps({ params }) {
-    const postData = getPostData(params.id)
-    return {
-        props: {
-            postData
-        }
-    }
-}
 
-export async function getStaticPaths() {
-    const paths = getAllPostIds()
-    return {
-        paths,
-        fallback: false
-    }
-}
+export default function Post({
+    postData
+    }: {
+        postData: {
+            title: string
+            date: string
+            contentHtml: string
 
-export default function Post({ postData }) {
+    } }) {
     return (
         <BasePageLayout
             metaTitle={postData.title}
@@ -34,4 +27,21 @@ export default function Post({ postData }) {
             </article>
         </BasePageLayout>
     )
+}
+
+export const getStaticPaths: GetStaticPaths = async () => {
+    const paths = getAllPostIds()
+    return {
+        paths,
+        fallback: false
+    }
+}
+
+export const getStaticProps: GetStaticProps = async ({ params }) => {
+    const postData = await getPostData(params.id as string)
+    return {
+        props: {
+            postData
+        }
+    }
 }
