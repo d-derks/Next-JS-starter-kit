@@ -6,16 +6,18 @@
 
 .host {
   // * default props * //
-  --button-padding-x-axis: 2rem;
-  --button-padding-y-axis: 0.8rem;
-  --button-font-size: 1.4rem;
-  --button-background-color: #{$color-04};
-  --button-background-color-active: #0c4a84;
+  --button-padding-x-axis: 2.6rem;
+  --button-padding-y-axis: 1.4rem;
+  --button-font-size: 1.8rem;
+  --button-background-color: #{$color-03};
+  --button-background-color-active: #{$color-04};
   --button-text-color: #{$color-01};
+  --button-min-width: 20rem;
   // **** //
 
   display: inline-flex;
   padding: var(--button-padding-y-axis) var(--button-padding-x-axis);
+  min-width: var(--button-min-width);
   border-radius: 3em;
   background-color: var(--button-background-color);
   transition: background-color $button-animation;
@@ -27,6 +29,8 @@
 }
 
 .inner {
+  width: 100%;
+  text-align: center;
   line-height: 1;
   font-size: var(--button-font-size);
   color: var(--button-text-color);
@@ -45,9 +49,10 @@
 }
 
 .small {
-  --button-padding-x-axis: 1.6rem;
-  --button-padding-y-axis: 0.6rem;
-  --button-font-size: 1.2rem;
+  --button-padding-x-axis: 2.2rem;
+  --button-padding-y-axis: 1.2rem;
+  --button-font-size: 1.6rem;
+  --button-min-width: 10rem;
 }
 
 .medium {
@@ -55,6 +60,5 @@
 }
 
 .large {
-  --button-padding-x-axis: 2.6rem;
-  --button-font-size: 1.6rem;
+  --button-min-width: 28rem;
 }
