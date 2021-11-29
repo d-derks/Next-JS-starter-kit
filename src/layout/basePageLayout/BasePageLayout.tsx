@@ -8,7 +8,7 @@ import PageFooter from "#components/pageFooter/PageFooter";
 
 export const siteTitle = 'Next js starter kit';
 
-type BasePageLayoutProps = {
+interface BasePageLayoutProps {
     children: React.ReactNode,
     home?: boolean,
     metaTitle?: string,
