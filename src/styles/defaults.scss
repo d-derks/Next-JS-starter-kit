@@ -2,8 +2,9 @@
 
 -------------------------------------- */
 
-//This (#__next) is the container element for the react-app,automatically created by the next.js framework:
-#__next {
+// This (#__next) is the container element for the react-app,automatically created by the next.js framework:
+
+#__next { // stylelint-disable-line  selector-id-pattern
   flex-direction: column;
   position: relative;
   display: flex;
@@ -27,7 +28,6 @@ html {
   display: none !important; // stylelint-disable-line declaration-no-important
 }
 
-
 /**
  * Body
  */
@@ -49,7 +49,6 @@ body {
   overscroll-behavior-y: contain;
   scroll-behavior: smooth;
 }
-
 
 /**
  * Headlines
@@ -166,7 +165,6 @@ textarea {
   border: none;
 }
 
-
 /**
  * Images
  */
@@ -176,15 +174,9 @@ img {
   max-width: 100%;
 }
 
-
 /**
  * Buttons
  */
-
-button::-moz-focus-inner {
-  border: 0;
-  padding: 0;
-}
 
 button,
 a {

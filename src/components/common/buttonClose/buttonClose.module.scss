@@ -2,8 +2,8 @@
 
 -------------------------------------- */
 
-@import '../../../styles/resources/mixins/index';
-@import '../../../styles/resources/variables';
+@import "../../../styles/resources/mixins/index";
+@import "../../../styles/resources/variables";
 
 .host {
   --button-close-size: 2rem;
@@ -12,17 +12,21 @@
   width: var(--button-close-size);
   height: var(--button-close-size);
 
+  // icon color / animation
+  &.icon {
+    color: var(--button-close-icon-color);
+  }
+
   &:hover,
   &:focus {
     .icon {
       --button-close-icon-color: #{$color-04};
+
       transition: all $button-animation;
     }
   }
-}
 
-.icon {
-  color: var(--button-close-icon-color);
+  // end icon color / animation
 }
 
 .small {

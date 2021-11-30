@@ -1,19 +1,15 @@
 @mixin centerering($horizontal: true, $vertical: true) {
-  @if ($horizontal and $vertical) {
+  @if $horizontal and $vertical {
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
     margin: auto;
-  }
-
-  @else if ($horizontal) {
+  } @else if $horizontal {
     right: 0;
     left: 0;
     margin: 0 auto;
-  }
-
-  @else if ($vertical) {
+  } @else if $vertical {
     top: 0;
     bottom: 0;
     margin: auto 0;

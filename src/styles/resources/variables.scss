@@ -8,10 +8,10 @@ $global-font-size: 62.5%; // root font size calculation trick to make 1rem  = 10
 
 // breakpoints
 
-//$max-width-page-xs: ;
-//$max-width-page-s: ;
-//$max-width-page: ;
-//$max-width-user-page: ;
+// $max-width-page-xs: ;
+// $max-width-page-s: ;
+// $max-width-page: ;
+// $max-width-user-page: ;
 
 // general colors
 
@@ -22,26 +22,26 @@ $color-04: #1b91ff;
 $color-05: #673ab7;
 $color-06: #f16d85;
 $color-07: #66fcf1;
-//$color-08: #;
-//$color-09: #;
-//$color-10: #;
-//$color-11: #;
-//$color-12: #;
-//$color-13: #;
-//$color-14: #;
+
+// $color-08: #;
+// $color-09: #;
+// $color-10: #;
+// $color-11: #;
+// $color-12: #;
+// $color-13: #;
+// $color-14: #;
 
 // gradient colors
 
 $readability-gradient: linear-gradient(
-                90deg,
-                rgba(8, 11, 23, .7) 0%,
-                rgba(8, 11, 23, .5) 31%,
-                rgba(8, 11, 23, .3) 47%,
-                rgba(8, 11, 23, 0) 60%,
-                rgba(8, 11, 23, 0) 100%
+  90deg,
+  rgb(8 11 23 / 70%) 0%,
+  rgb(8 11 23 / 50%) 31%,
+  rgb(8 11 23 / 30%) 47%,
+  rgb(8 11 23 / 0%) 60%,
+  rgb(8 11 23 / 0%) 100%
 );
-
-$base-font: 'Lato', sans-serif;
+$base-font: "Lato", sans-serif;
 $base-fontsize: 1.6rem;
 $base-lineheight: 2.2rem;
 
@@ -67,7 +67,7 @@ $fontsize-xs: 1.2rem;
 
 // timing variables
 $button-animation: 220ms ease-out;
-$text-animation: 220ms cubic-bezier(.075, .82, .165, 1);
+$text-animation: 220ms cubic-bezier(0.075, 0.82, 0.165, 1);
 
 // z-index
 

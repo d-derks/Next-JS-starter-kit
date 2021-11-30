@@ -2,14 +2,14 @@
 
 -------------------------------------- */
 
-@import '../../styles/resources/mixins/index';
-@import '../../styles/resources/variables';
+@import "../../styles/resources/mixins/index";
+@import "../../styles/resources/variables";
 
 .host {
   --page-section-background-color: #{$color-02};
 
   position: relative;
-  width: min(100%, 200rem);
+  width: min(100%, 200rem); // stylelint-disable-line scss/no-global-function-names
   margin: auto;
   background-color: var(--page-section-background-color);
 
