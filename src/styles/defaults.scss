@@ -3,7 +3,7 @@
 -------------------------------------- */
 
 // This (#__next) is the container element for the react-app,automatically created by the next.js framework:
-@use "src/styles/resources/mixins/button-reset";
+@use "src/styles/resources/mixins/index" as buttonReset;
 
 #__next { // stylelint-disable-line  selector-id-pattern
   position: relative;
@@ -181,5 +181,5 @@ img {
 
 button,
 a {
-  @include button-reset.button-reset;
+  @include buttonReset.button-reset;
 }

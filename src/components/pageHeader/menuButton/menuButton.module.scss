@@ -2,7 +2,7 @@
 
 -------------------------------------- */
 
-@use "src/styles/resources/mixins/positioning";
+@use "src/styles/resources/mixins/index" as positioning;
 
 .host {
   --menu-button-color: #fff;
