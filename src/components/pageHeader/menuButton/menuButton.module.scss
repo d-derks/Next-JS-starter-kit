@@ -2,10 +2,11 @@
 
 -------------------------------------- */
 
-@import "../../../styles/resources/mixins/index";
-@import "../../../styles/resources/variables";
+@use "src/styles/resources/mixins/positioning";
 
 .host {
+  --menu-button-color: #fff;
+
   position: absolute;
   top: 2rem;
   right: 2rem;
@@ -13,20 +14,19 @@
   display: flex;
   width: 2rem;
   height: 2rem;
-  background-color: var(--page-header-menu-color);
   border-radius: 50%;
 
   &:focus {
     outline: none;
   }
 
-  &.text {
-    @include centerering;
+  .text {
+    @include positioning.centerering;
 
     display: block;
     width: 100%;
     height: 2px;
-    background: #fff;
+    background: var(--menu-button-color);
     border-radius: 4px;
     transition: transform 300ms;
     will-change: transform;
@@ -38,7 +38,7 @@
       display: block;
       width: 100%;
       height: 2px;
-      background-color: #fff;
+      background-color: var(--menu-button-color);
       border-radius: 4px;
       transition: transform 120ms ease-out;
       content: "";
