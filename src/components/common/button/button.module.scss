@@ -17,10 +17,10 @@
   // **** //
 
   display: inline-flex;
-  padding: var(--button-padding-y-axis) var(--button-padding-x-axis);
   min-width: var(--button-min-width);
-  border-radius: 3em;
+  padding: var(--button-padding-y-axis) var(--button-padding-x-axis);
   background-color: var(--button-background-color);
+  border-radius: 3em;
   transition: background-color $button-animation;
 
   &:hover,
@@ -31,10 +31,10 @@
 
 .inner {
   width: 100%;
-  text-align: center;
-  line-height: 1;
-  font-size: var(--button-font-size);
   color: var(--button-text-color);
+  font-size: var(--button-font-size);
+  line-height: 1;
+  text-align: center;
 }
 
 .primary {

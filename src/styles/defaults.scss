@@ -5,9 +5,9 @@
 // This (#__next) is the container element for the react-app,automatically created by the next.js framework:
 
 #__next { // stylelint-disable-line  selector-id-pattern
-  flex-direction: column;
   position: relative;
   display: flex;
+  flex-direction: column;
   height: 100%;
 }
 
@@ -33,19 +33,19 @@ html {
  */
 
 body {
-  overflow-x: hidden;
   height: 100%;
   margin: 0;
-  font-family: $base-font;
-  font-size: $base-fontsize;
+  overflow-x: hidden;
   font-weight: 400;
+  font-size: $base-fontsize;
+  font-family: $base-font;
   line-height: $base-lineheight;
   text-align: left;
-  text-rendering: optimizeLegibility;
-  text-size-adjust: 100%;
-  -webkit-tap-highlight-color: transparent;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  text-size-adjust: 100%; // https://developer.mozilla.org/en-US/docs/Web/CSS/text-size-adjust
+  -webkit-tap-highlight-color: transparent;
   overscroll-behavior-y: contain;
   scroll-behavior: smooth;
 }
@@ -61,8 +61,8 @@ h4,
 h5,
 h6 {
   margin: 0;
-  font-family: $base-font;
   font-weight: 400;
+  font-family: $base-font;
 }
 
 /**
@@ -91,9 +91,9 @@ address {
 }
 
 abbr {
-  border-bottom: 1px dotted;
   font-variant: small-caps;
   letter-spacing: 1px;
+  border-bottom: 1px dotted;
   cursor: help;
 }
 
@@ -122,8 +122,8 @@ blockquote {
 hr {
   height: 1px;
   margin: 0;
-  border: 0;
   padding: 0;
+  border: 0;
 }
 
 mark {
@@ -151,8 +151,8 @@ fieldset {
   position: relative;
   width: 100%;
   margin: 0;
-  border: none;
   padding: 0;
+  border: none;
 }
 
 legend {
