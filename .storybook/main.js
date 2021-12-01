@@ -65,6 +65,8 @@ module.exports = {
                     loader: 'sass-loader',
                     options: {
                         sourceMap: true,
+                        additionalData:
+                            '@import "' + path.resolve('./src/styles/resources/variables') + '";',
                     },
                 },
             ],
