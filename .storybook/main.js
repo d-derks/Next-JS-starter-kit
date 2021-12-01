@@ -66,7 +66,7 @@ module.exports = {
                     options: {
                         sourceMap: true,
                         additionalData:
-                            '@import "' + path.resolve('./src/styles/resources/variables') + '";',
+                            '@import "' + path.resolve('./src/styles/global/variables') + '";',
                     },
                 },
             ],

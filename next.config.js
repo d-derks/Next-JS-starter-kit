@@ -5,7 +5,7 @@ module.exports = {
         /** make variables/mixins available to modularized scss-files */
         additionalData: `
           @use "src/styles/resources/mixins/index" as *;
-          @import "./src/styles/resources/variables.scss";
+          @import "./src/styles/global/variables.scss";
         `,
     },
 }
