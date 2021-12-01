@@ -7,7 +7,8 @@
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "eslint": "next lint",
-    "stylelint": "stylelint --ignore-path .gitignore --fix \"**/*.scss\""
+    "stylelint": "stylelint --ignore-path .gitignore --fix \"**/*.scss\"",
+    "prettier": "prettier --ignore-path .gitignore \"**/*.+(ts|tsx|js|jsx|json|scss|md|mdx|html)\""
   },
   "dependencies": {
     "classnames": "^2.2.6",
@@ -34,15 +35,18 @@
     "babel-loader": "^8.2.3",
     "eslint": "7.32.0",
     "eslint-config-next": "12.0.4",
+    "eslint-config-prettier": "^8.3.0",
     "node-sass": "^5.0.0",
     "postcss": "^8.3.11",
     "postcss-extend": "^1.0.5",
     "postcss-import": "^14.0.2",
     "postcss-loader": "^4.3.0",
     "postcss-nested": "^5.0.6",
+    "prettier": "2.2.1",
     "prop-types": "^15.7.2",
     "sass-loader": "^10.0.5",
     "stylelint": "^14.1.0",
+    "stylelint-config-prettier": "^9.0.3",
     "stylelint-config-rational-order": "^0.1.2",
     "stylelint-config-standard-scss": "^3.0.0",
     "stylelint-order": "^5.0.0",
