@@ -7,9 +7,9 @@
   --button-padding-x-axis: 2.6rem;
   --button-padding-y-axis: 1.4rem;
   --button-font-size: 1.8rem;
-  --button-background-color: #{$color-03};
-  --button-background-color-active: #{$color-04};
-  --button-text-color: #{$color-01};
+  --button-background-color: var(--color-03);
+  --button-background-color-active: var(--color-04);
+  --button-text-color: var(--color-01);
   --button-min-width: 20rem;
 
   // **** //
@@ -19,7 +19,7 @@
   padding: var(--button-padding-y-axis) var(--button-padding-x-axis);
   background-color: var(--button-background-color);
   border-radius: 3em;
-  transition: background-color $button-animation;
+  transition: background-color var(--button-animation);
 
   &:hover,
   &:focus {
