@@ -3,7 +3,7 @@
 -------------------------------------- */
 
 // This (#__next) is the container element for the react-app,automatically created by the next.js framework:
-@use "src/styles/resources/mixins/index" as buttonReset;
+@use "src/styles/resources/mixins/button-reset" as buttonReset;
 
 #__next { // stylelint-disable-line  selector-id-pattern
   position: relative;
@@ -15,7 +15,7 @@
 html {
   box-sizing: border-box;
   height: 100%;
-  font-size: $global-font-size;
+  font-size: var(--global-font-size);
   background-color: var(--color-page);
 }
 
@@ -38,9 +38,9 @@ body {
   margin: 0;
   overflow-x: hidden;
   font-weight: 400;
-  font-size: $base-fontsize;
-  font-family: $base-font;
-  line-height: $base-lineheight;
+  font-size: var(--base-fontsize);
+  font-family: var(--base-font);
+  line-height: var(--base-lineheight);
   text-align: left;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -63,7 +63,7 @@ h5,
 h6 {
   margin: 0;
   font-weight: 400;
-  font-family: $base-font;
+  font-family: var(--base-font);
 }
 
 /**
@@ -73,7 +73,7 @@ h6 {
 span,
 p {
   margin: 0;
-  font-family: $base-font;
+  font-family: var(--base-font);
 }
 
 b,
@@ -116,7 +116,7 @@ sup {
 q,
 cite,
 blockquote {
-  font-family: $base-font;
+  font-family: var(--base-font);
   font-style: italic;
 }
 
@@ -128,7 +128,7 @@ hr {
 }
 
 mark {
-  background-color: $color-02;
+  background-color: var(--color-02);
 }
 
 ol,

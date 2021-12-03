@@ -3,7 +3,7 @@
 -------------------------------------- */
 
 .host {
-  --page-section-background-color: #{$color-02};
+  --page-section-background-color: var(--color-02);
 
   position: relative;
   width: min(100%, 200rem); // stylelint-disable-line scss/no-global-function-names
@@ -17,18 +17,18 @@
 
 .inner {
   width: 100%;
-  max-width: $max-width-page-l;
+  max-width: var(--max-width-page-l);
   margin: auto;
 }
 
 .isMaxWidthXl {
   .inner {
-    max-width: $max-width-page-xl;
+    max-width: var(--max-width-page-xl);
   }
 }
 
 .isBgDark {
-  --page-section-background-color: #{$color-03}; // todo: replace color
+  --page-section-background-color: var(--color-03); // todo: replace color
 }
 
 .isFullWidth {
