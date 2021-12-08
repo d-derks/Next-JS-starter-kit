@@ -6,6 +6,8 @@
   position: fixed;
   top: 0;
   width: 100%;
-  padding: 2rem var(--padding-page-sides) 1rem;
+  height: var(--page-header-height);
+  padding: 2rem var(--padding-page-sides);
   background-color: var(--color-03);
+  z-index: var(--level-3);
 }
