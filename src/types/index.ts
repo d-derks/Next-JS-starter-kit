@@ -5,8 +5,6 @@ export type newsFeed = {
   text: string;
   media: {
     src: string;
-    ratios: string[];
-    width: string;
-    height: string;
+    ratio: string;
   };
 };
