@@ -63,6 +63,7 @@
 
     --default-background-color: var(--color-02);
     --padding-page-sides: 1.6rem;
+    --component-bottom-guttor: #{clamp(5rem, 1rem + 6vw, 8rem)};
 
     // page header
 
