@@ -18,8 +18,7 @@ const Home = ({ data, news }) => {
             title={feed.title}
             media={{
               src: feed.media.src,
-              width: "3",
-              height: "2",
+              ratio: feed.media.ratio,
             }}
           />
         ))}
