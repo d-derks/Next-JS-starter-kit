@@ -1,0 +1,19 @@
+/* intro *
+
+-------------------------------------- */
+
+.host {
+    width: min(100%, 60rem);
+}
+
+.alignCenter {
+    margin: auto;
+}
+
+.alignRight {
+    margin-left: auto;
+}
+
+.gutterBottom {
+    margin-bottom: var(--component-bottom-guttor);
+}
