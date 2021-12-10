@@ -19,12 +19,17 @@ export const getAllNews = async () => {
   };
 };
 
-export async function getAllStandardNews() {
+export const getAllStandardNews = async () => {
   const allNews = await getAllNews();
   return allNews.newList.filter((item) => item.category === "standard");
-}
+};
 
-export async function getAllEntertainmentNews() {
+export const getAllEntertainmentNews = async () => {
   const allNews = await getAllNews();
   return allNews.newList.filter((item) => item.category === "entertainment");
-}
+};
+
+export const getNewsById = async (id) => {
+  const allNews = await getAllNews();
+  return allNews.newList.find((item) => item.id === id);
+};
