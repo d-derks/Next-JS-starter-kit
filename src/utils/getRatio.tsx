@@ -1,4 +1,8 @@
-export const getDimensionsFromRatio = (ratio: string) => {
+export const getRatioImage = (ratio: string, images) => {
+  return images.ratios[JSON.stringify(ratio)];
+};
+
+export const getDimenstionsFromRatio = (ratio: string) => {
   switch (ratio) {
     case "1_1":
       return {
