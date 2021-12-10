@@ -16,10 +16,8 @@ const Home = ({ data, news }) => {
           <Card
             key={feed.id}
             title={feed.title}
-            media={{
-              src: feed.media.src,
-              ratio: feed.media.ratio,
-            }}
+            href={`/examples/news/${feed.id}`}
+            images={feed.images}
           />
         ))}
       </PageSection>
@@ -33,7 +31,7 @@ export const getStaticProps: GetStaticProps = async () => {
     "https://starterkit-next-js-default-rtdb.firebaseio.com/.json"
   );
   const data = await response.json();
-  //const filteredNews = allNews.filter((item) => item.category === "standard");
+
   return {
     props: {
       data: data,
