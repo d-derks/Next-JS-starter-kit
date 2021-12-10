@@ -12,6 +12,7 @@ module.exports = {
     spacing: {
       0: "0",
       1: "1rem",
+      1.6: "1.6rem", // custom spacing for standard padding sides
       2: "2rem",
       3: "3rem",
       4: "4rem",
