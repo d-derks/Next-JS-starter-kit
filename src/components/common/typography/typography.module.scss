@@ -3,6 +3,8 @@
 -------------------------------------- */
 
 .host {
+  --typography-link-active-color: var(--color-04);
+
   color: var(--font-color-default-text);
   font-size: var(--fontsize-default-text);
 
@@ -45,6 +47,14 @@
     font-weight: 400;
     font-size: var(--fontsize-default-text);
     line-height: 1.6;
+  }
+
+  &[data-variant="a"] {
+    transition: var(--text-animation);
+    &:hover,
+    &:focus {
+      --font-color-default-text: var(--typography-link-active-color);
+    }
   }
 
   // default text size l
