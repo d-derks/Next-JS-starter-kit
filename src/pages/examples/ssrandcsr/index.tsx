@@ -22,10 +22,7 @@ const NewsPage = ({ props }) => {
       for (const key in data) {
         newDataList.push({
           id: key,
-          title: data[key].title,
-          leadin: data[key].leadin,
-          text: data[key].text,
-          media: data[key].media,
+          ...data[key],
         });
       }
       setNewsData(newDataList);
@@ -46,14 +43,11 @@ const NewsPage = ({ props }) => {
       <PageSection>
         {newsData?.map((newsItem: newsFeed) => (
           <Card
+            href="/"
             key={newsItem.id}
             title={newsItem.title}
             leadin={newsItem.leadin}
-            media={{
-              src: newsItem.media.src,
-              width: "3",
-              height: "2",
-            }}
+            images={newsItem.images}
           />
         ))}
       </PageSection>
