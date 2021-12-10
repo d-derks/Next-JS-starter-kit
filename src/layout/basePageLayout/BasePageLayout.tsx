@@ -18,7 +18,6 @@ interface BasePageLayoutProps {
 const BasePageLayout = ({
   children,
   home,
-  metaTitle = "meta title",
   spacingTop = true,
 }: BasePageLayoutProps) => {
   return (
@@ -36,7 +35,6 @@ const BasePageLayout = ({
         />
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
-        <title>{metaTitle}</title>
         <link rel="icon" href="/favicon.ico" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
