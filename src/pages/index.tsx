@@ -1,61 +1,47 @@
-import { useState } from "react";
 import { GetStaticProps } from "next";
 import Head from "next/head";
 import BasePageLayout from "src/layout/basePageLayout/BasePageLayout";
-import Link from "next/link";
-import Date from "#components/example/date/Date";
-import { getSortedPostsData } from "../lib/examplePosts";
-import Button from "src/components/common/button/Button";
 import PageSection from "../layout/pageSection/PageSection";
-import Typography from "#components/common/typography/Typography";
+import { getAllStandardNews } from "../../helpers/api-utils";
+import Intro from "#components/blocks/intro/Intro";
+import Card from "#components/common/card/Card";
+import { newsFeed } from "#types";
+import fetch from "node-fetch";
 
-interface HomeProps {
-  allPostsData: {
-    date: string;
-    title: string;
-    id: string;
-  }[];
-}
-
-export const getStaticProps: GetStaticProps = async () => {
-  const allPostsData = getSortedPostsData();
-  return {
-    props: {
-      allPostsData,
-    },
-  };
-};
-
-const Home = ({ allPostsData }: HomeProps) => {
-  // example fetching data
-  const [value, setValue] = useState({ title: "waiting for data" });
-
-  const fetchData = async (event) => {
-    const response = await fetch("/api/hello");
-    setValue(await response.json());
-  };
-  // end example fetching data
+const Home = ({ data, news }) => {
   return (
     <BasePageLayout home>
-      <Head>
-        <title>Starter kit</title>
-      </Head>
+        <Head>
+            <title>Starter kit</title>
+        </Head>
       <PageSection>
-        <Typography variant="h2" text={value.title} />
-        <ul>
-          {allPostsData.map(({ id, date, title }) => (
-            <li className="listItem" key={id}>
-              <Link href={`/examplePosts/${id}`}>
-                <a>{title}</a>
-              </Link>
-              <Date dateString={date} />
-            </li>
-          ))}
-        </ul>
-        <Button onClick={fetchData} text="Get data" />
+        <Intro title={data.title} leadin={data.leadin} />
+        {news?.map((feed: newsFeed) => (
+          <Card
+            key={feed.id}
+            title={feed.title}
+            href={`/examples/news/${feed.id}`}
+            images={feed.images}
+          />
+        ))}
       </PageSection>
     </BasePageLayout>
   );
+};
+
+export const getStaticProps: GetStaticProps = async () => {
+  const allNews = await getAllStandardNews();
+  const response = await fetch(
+    "https://starterkit-next-js-default-rtdb.firebaseio.com/.json"
+  );
+  const data = await response.json();
+
+  return {
+    props: {
+      data: data,
+      news: allNews,
+    },
+  };
 };
 
 export default Home;
