@@ -52,7 +52,16 @@ const BasePageLayout = ({
         className={`${styles.main} ${spacingTop ? `${styles.topGap}` : null}`}
       >
         {children}
-        {!home && <Link href="/">Back to home</Link>}
+        {!home && (
+          <Link href="/">
+            <Typography
+              href="/"
+              extraClass="u_pl-1.6"
+              text="Back to home"
+              variant="a"
+            />
+          </Link>
+        )}
       </main>
       <PageFooter>
         <Typography text="This is the footer area" variant="h2" color="light" />
