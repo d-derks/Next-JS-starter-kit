@@ -1,0 +1,22 @@
+/* grid *
+
+-------------------------------------- */
+
+.host {
+    display:grid;
+    grid-template-columns:
+    repeat(auto-fill, minmax(clamp(clamp(clamp(
+        100% / (var(--grid-columns-md, 4) + 1) + 0.1%,
+        (var(--grid-container-md, 1000px) - 100%) * 1000,
+        100% / (var(--grid-columns-sm, 3) + 1) + 0.1%),
+        (var(--grid-container-sm, 800px) - 100%) * 1000,
+        100% / (var(--grid-columns-xs, 2) + 1) + 0.1%),
+        (var(--grid-container-xs, 400px) - 100%) * 1000,
+        100%), 1fr)
+    );
+    gap: calc(var(--grid-gutter, 1rem) * 1rem);
+    margin:5px;
+    overflow:hidden;
+    resize:horizontal;
+}
+
