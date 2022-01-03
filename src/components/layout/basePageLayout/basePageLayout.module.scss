@@ -3,12 +3,12 @@
 -------------------------------------- */
 
 .main {
-  --page-main-top-gap: 0rem;
+  --page-main-top-gap: 0;
 
   flex: 1 0 auto;
   width: 100%;
   padding-top: calc(var(--page-header-height) + var(--page-main-top-gap, 0rem));
-  background-color: var(--default-background-color);
+  background-color: var(--page-background-color);
 }
 
 .topGap {
