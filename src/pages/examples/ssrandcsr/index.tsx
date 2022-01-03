@@ -1,7 +1,7 @@
-import BasePageLayout from "#layout/basePageLayout/BasePageLayout";
+import BasePageLayout from "#components/layout/basePageLayout/BasePageLayout";
 import React, { useEffect, useState } from "react";
 import Typography from "#components/common/typography/Typography";
-import PageSection from "#layout/pageSection/PageSection";
+import PageSection from "#components/layout/pageSection/PageSection";
 import { newsFeed } from "#types";
 import Card from "#components/common/card/Card";
 import useSWR from "swr";
