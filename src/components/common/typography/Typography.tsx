@@ -5,8 +5,8 @@ import styles from "./typography.module.scss";
 type TypographyProps = {
   text: string;
   href?: string;
-  variant: "h1" | "h2" | "h3" | "h4" | "p" | "a";
-  size?: "l";
+  variant: "h1" | "h2" | "h3" | "h4" | "p" | "span" | "a" | "legend" | "label";
+  size?: "s" | "m" | "l";
   color?: "light" | "dark";
   gutterBottom?: boolean;
   extraClass?: string;
