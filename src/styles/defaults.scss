@@ -163,7 +163,13 @@ legend {
 input,
 select,
 textarea {
+  background-color: transparent;
   border: none;
+
+  &:focus,
+  &:active {
+    outline: none;
+  }
 }
 
 /**
