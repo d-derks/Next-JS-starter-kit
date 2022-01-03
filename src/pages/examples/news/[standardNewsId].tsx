@@ -1,6 +1,6 @@
 import React from "react";
-import BasePageLayout from "#layout/basePageLayout/BasePageLayout";
-import PageSection from "#layout/pageSection/PageSection";
+import BasePageLayout from "#components/layout/basePageLayout/BasePageLayout";
+import PageSection from "#components/layout/pageSection/PageSection";
 import Intro from "#components/blocks/intro/Intro";
 import { GetStaticPaths, GetStaticProps } from "next";
 import { getAllStandardNews, getNewsById } from "../../../../helpers/api-utils";
