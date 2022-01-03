@@ -1,0 +1,22 @@
+/* input *
+
+-------------------------------------- */
+
+.host {
+    width: 100%;
+    padding: 1.4rem 0.7rem 1.4rem 0.5rem;
+    color: var(--color-03);
+    font-weight: 300;
+    font-size: var(--fontsize-s);
+    background-color: var(--form-input-background-color);
+
+    &::placeholder {
+        color: var(--form-placeholder-color);
+    }
+
+    &:disabled,
+    &:read-only {
+       // add styles
+    }
+}
+
