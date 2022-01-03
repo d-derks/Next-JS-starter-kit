@@ -37,7 +37,6 @@
     --fontsize-m: 1.6rem;
     --fontsize-s: 1.4rem;
     --fontsize-xs: 1.2rem;
-
     --fontsize-default-text: 1.6rem;
 
     // timing variables
@@ -59,9 +58,18 @@
     --max-width-page-l: 118rem;
     --max-width-page-xl: 140rem;
 
+    // form
+    --form-placeholder-color: #5c5e5e;
+    --form-label-bottom-spacing: 0.5rem;
+    --form-focus-color: var(--color-04);
+    --form-input-background-color: var(--color-02);
+    --form-input-border-color: #a3a3a3;
+    --form-input-color-disabled: #a3a3a3;
+
+
     // default page props
 
-    --default-background-color: var(--color-02);
+    --page-background-color: var(--color-02);
     --padding-page-sides: 1.6rem;
     --component-bottom-guttor: #{clamp(5rem, 1rem + 6vw, 8rem)};
 
