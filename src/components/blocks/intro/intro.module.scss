@@ -3,7 +3,7 @@
 -------------------------------------- */
 
 .host {
-    width: min(100%, 60rem);
+    width: min(100%, 60rem); // stylelint-disable-line scss/no-global-function-names
 }
 
 .alignCenter {
