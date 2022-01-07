@@ -1,0 +1,14 @@
+/* form row *
+
+-------------------------------------- */
+
+.host {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 0 calc(var(--form-row-gutter) * -1);
+
+    > div {
+        padding: 0 var(--form-row-gutter);
+    }
+}
