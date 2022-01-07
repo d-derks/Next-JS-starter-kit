@@ -1,19 +1,29 @@
-import React from 'react';
-import styles from './menuMobile.module.scss';
+import React from "react";
+import styles from "./menuMobile.module.scss";
+import { useOvermindActions, useOvermindState } from "../../../store/overmind";
 
-type MobileMenuProps = {
-    menuOpen: boolean,
-}
+const MenuMobile = () => {
+  const {
+    app: { mainMenuOpen },
+  } = useOvermindState();
 
-const MenuMobile = ({menuOpen}: MobileMenuProps) => {
-    return (
-        <div
-            className={styles.host}
-            aria-expanded={menuOpen ? 'true' : 'false'}
-        >
-            Hello
-        </div>
-    );
+  const {
+    app: { toggleMainMenu },
+  } = useOvermindActions();
+  const handleMainClose = () => {
+    toggleMainMenu(false);
+  };
+  return (
+    <>
+      <div
+        className={styles.host}
+        aria-expanded={mainMenuOpen ? "true" : "false"}
+      >
+        Hello
+      </div>
+      <button onClick={handleMainClose}>close</button>
+    </>
+  );
 };
 
 export default MenuMobile;
