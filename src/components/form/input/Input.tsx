@@ -9,6 +9,7 @@ export type InputProps = {
   disabled?: boolean;
   className?: string;
   borderBottom?: boolean;
+  inputRef?: React.Ref<HTMLInputElement> | null;
 };
 
 const Input = ({
@@ -17,6 +18,7 @@ const Input = ({
   type = "text",
   disabled = false,
   className,
+  inputRef,
 }: InputProps) => {
   const [value, setValue] = useState("");
   const handleChange = (event) => {
@@ -34,6 +36,7 @@ const Input = ({
       {...(!!disabled ? disabled : {})}
       value={value}
       onChange={handleChange}
+      ref={inputRef}
     />
   );
 };
