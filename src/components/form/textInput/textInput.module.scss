@@ -1,0 +1,121 @@
+/* text input *
+
+-------------------------------------- */
+
+.host {
+    --text-input-focus-color: var(--color-03);
+
+    flex: 1 1 auto;
+    width: min(20rem, 100%); /* stylelint-disable-line scss/no-global-function-names */
+
+    &:not(.labelFloating.outlined) {
+        display: flex;
+        flex-direction: column;
+
+        .input {
+            order: 2;
+        }
+
+        .label {
+            display: inline-block;
+            margin-bottom: 0.4rem;
+        }
+    }
+}
+/* stylelint-disable */
+.label {
+    color: var(--font-color-default-text);
+    font-size: var(--fontsize-xs);
+}
+
+.input {
+    margin-bottom: 0.3rem;
+}
+
+// modifier classes
+
+.standard {
+    .input {
+        box-shadow: inset 0 -1px 0 var(--form-input-border-color);
+    }
+}
+
+.outlined {
+    position: relative;
+
+    .input {
+        padding-left: 1rem;
+        border: solid 1px var(--form-input-border-color);
+        border-radius: 4px;
+    }
+}
+
+.labelFloating {
+    .label {
+        overflow: hidden;
+        color: var(--form-placeholder-color);
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        transform: translate(1rem, 4rem) scale(1.3);
+        transform-origin: left bottom;
+        transition: all 220ms ease;
+        pointer-events: none;
+    }
+
+    .input {
+        &::placeholder {
+            opacity: 0;
+        }
+
+        &:focus,
+        &:not(:placeholder-shown) + .label {
+            &::placeholder {
+                opacity: 1;
+            }
+
+            + .label {
+                color: var(--text-input-focus-color);
+                transform: translate(0, 0) scale(1);
+                cursor: pointer
+            }
+        }
+    }
+
+    &:not(.outlined) {
+        &:focus {
+            box-shadow: inset 0 -2px 0 var(--text-input-focus-color);
+        }
+    }
+
+    // label floating with outline
+    &.outlined {
+        .label {
+            position: absolute;
+            top: 0;
+            left: 0;
+            margin: 0 calc(0.5rem + var(--form-row-gutter));
+            padding: 0 0.3rem;
+            background-color: var(--form-input-background-color);
+            transform: translate(0, 2rem) scale(1.3);
+            pointer-events: none;
+        }
+
+        .input {
+            &:not(:placeholder-shown) + .label,
+            &:focus + .label {
+                transform: translate(0, -1rem) scale(1);
+            }
+        }
+        /* stylelint-enable */
+
+        &:focus {
+            .input {
+                --form-input-border-color: var(--text-input-focus-color)
+            }
+        }
+    }
+}
+
+.gutterBottom {
+    margin-bottom: var(--form-field-bottom-spacing);
+}
