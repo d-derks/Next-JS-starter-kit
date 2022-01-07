@@ -7,7 +7,7 @@ type TypographyProps = {
   href?: string;
   variant: "h1" | "h2" | "h3" | "h4" | "p" | "span" | "a" | "legend" | "label";
   size?: "s" | "m" | "l";
-  color?: "light" | "dark";
+  color?: "light" | "dark" | "error";
   gutterBottom?: boolean;
   extraClass?: string;
 };

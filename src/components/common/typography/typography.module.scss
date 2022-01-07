@@ -12,6 +12,10 @@
     --font-color-default-text: var(--color-01);
   }
 
+  &[data-color="error"] {
+    --font-color-default-text: var(--color-error);
+  }
+
   &[data-variant="h1"],
   &[data-variant="h2"],
   &[data-variant="h3"],
