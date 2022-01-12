@@ -3,6 +3,7 @@ import styles from "./textInput.module.scss";
 import Input, { InputProps } from "#components/form/input/Input";
 import classNames from "classnames";
 import Typography from "#components/common/typography/Typography";
+import FormMessage from "#components/form/formMessage/FormMessage";
 
 export type TextInputProps = {
   label: string;
@@ -11,7 +12,6 @@ export type TextInputProps = {
   labelFloating?: boolean;
   guttorBottom?: boolean;
   children?: React.ReactNode;
-  error?: string;
 } & InputProps;
 
 const TextInput = (props: TextInputProps) => {
@@ -22,7 +22,6 @@ const TextInput = (props: TextInputProps) => {
     className,
     guttorBottom = true,
     children,
-    error,
     ...restProps
   } = props;
   const blockClass = classNames(styles.host, className, {
@@ -35,15 +34,10 @@ const TextInput = (props: TextInputProps) => {
   return (
     <div className={blockClass}>
       <Input className={styles.input} {...restProps} />
-      <label className={styles.label}>{label}</label>
-      {error && (
-        <Typography
-          text={error}
-          variant="p"
-          color="error"
-          gutterBottom={false}
-        />
-      )}
+      <label className={styles.label} htmlFor={props.id}>
+        {label}
+      </label>
+      {children}
     </div>
   );
 };

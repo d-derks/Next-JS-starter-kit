@@ -1,15 +1,19 @@
-import React, { useState } from "react";
+import React from "react";
 import styles from "./input.module.scss";
 import classNames from "classnames";
+import { UseFormRegister, FieldValues } from "react-hook-form";
 
 export type InputProps = {
   id: string;
+  name: string;
   placeholder?: string;
   type?: "text" | "email" | "password" | "search";
   disabled?: boolean;
   className?: string;
   borderBottom?: boolean;
-  inputRef?: React.Ref<HTMLInputElement> | null;
+  defaultValue?: string;
+  register?: UseFormRegister<FieldValues>;
+  required?: boolean;
 };
 
 const Input = ({
@@ -18,13 +22,12 @@ const Input = ({
   type = "text",
   disabled = false,
   className,
-  inputRef,
+  name,
+  defaultValue,
+  register,
+  required = false,
+  ...restProps
 }: InputProps) => {
-  const [value, setValue] = useState("");
-  const handleChange = (event) => {
-    setValue(event.target.value);
-  };
-
   const blockClass = classNames(styles.host, className);
 
   return (
@@ -33,10 +36,9 @@ const Input = ({
       id={id}
       placeholder={placeholder}
       type={type}
+      {...register(name, { required: required })}
       {...(!!disabled ? disabled : {})}
-      value={value}
-      onChange={handleChange}
-      ref={inputRef}
+      {...restProps}
     />
   );
 };

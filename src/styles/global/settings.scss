@@ -11,6 +11,7 @@
     --color-05: #673ab7;
     --color-06: #f16d85;
     --color-07: #66fcf1;
+    --color-error: red;
 
     // fonts
     --global-font-size: 62.5%; // root font size calculation trick to make 1rem  = 10px
@@ -61,10 +62,12 @@
     // form
     --form-placeholder-color: #5c5e5e;
     --form-label-bottom-spacing: 0.5rem;
+    --form-field-bottom-spacing: 1rem;
     --form-focus-color: var(--color-04);
     --form-input-background-color: var(--color-02);
     --form-input-border-color: #a3a3a3;
     --form-input-color-disabled: #a3a3a3;
+    --form-row-gutter: 0.6rem;
 
 
     // default page props
