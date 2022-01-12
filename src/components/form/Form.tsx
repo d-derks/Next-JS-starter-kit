@@ -7,7 +7,7 @@ type FormProps = {
   title: string;
   children: React.ReactNode;
   className?: string;
-  onSubmit: any;
+  onSubmit: React.FormEventHandler;
 };
 
 const Form = ({ title, children, className, onSubmit }: FormProps) => {
